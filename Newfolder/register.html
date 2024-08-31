@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        .flex-container 
+        {
+            display: flex;
+            background-color: #4ad2db;
+        }
+        .flex-container > div 
+        {
+            background-color: #9be4e9;
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .flex-container a
+        {
+            color:blue;
+        }
+        .flex-container button 
+        {
+            background-color: #9be4e9;
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            color: #0033cc;
+        }
+        #stickybar
+        {
+            text-align: center;
+            background-color: #00bfff;
+            color: #fff;
+            padding: 20px;
+        }
+        #content
+        {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            margin: 30px;
+            opacity: 100%;
+        }
+        #content p
+        {
+            text-align:center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(3deg, rgba(150, 250, 230, 1) 0%, rgba(254, 255, 255, 1) 100%);
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="stickybar"><h1>Hospital Finder</h1></div>
+
+    <div class="flex-container">
+        <div><a href="index.html">
+            Home
+        </a></div>
+        <div><a href="aboutPage.html">
+            About Us
+        </a></div>
+        <div><a href="find-hospital.php">
+            Find a Hospital
+        </a></div>
+        <div><a href="booking.php">
+            Book a Consultation</a></div>
+        <div><a href="contact.html">
+            Contact Us
+        </a></div>
+        <div><a href="doctors.php">
+            Doctors Registered
+        </a></div>
+        <!-- <form method="post" action="login.html">
+            <button type="submit"><u>Login</u></button>
+        </form> -->
+    </div>
+
+    <div id="content">
+    <div class="container">
+        <h2>Register</h2>
+        <form method="post" action="register.php">
+            What is your role? <br />
+            <input type="radio" id="doc" name="role" value="Doctor">
+            <label for="doc">Doctor</label><br />
+            <input type="radio" id="pat" name="role" value="Patient">
+            <label for="pat">Patient</label><br /><br />
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="email" name="email" placeholder="Email ID" required />
+            <input type="text" name="phone" placeholder="Phone number" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+            <button type="submit" name="register">Register</button>
+        </form>
+        <p>Already have an account?</p>
+        <p>
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+    </div>
+</body>
+</html>

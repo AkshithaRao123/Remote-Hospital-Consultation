@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Hospital Finder</title>
+        <style>
+            body  
+            {
+                background-color: #f5f5f5;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                position: sticky;
+                color: #333;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(3deg, rgba(150, 250, 230, 1) 0%, rgba(254, 255, 255, 1) 100%);
+            }
+            .flex-container 
+            {
+                display: flex;
+                background-color: #4ad2db;
+            }
+            .flex-container > div 
+            {
+                background-color: #9be4e9;
+                margin: 10px;
+                padding: 10px;
+                font-size: 15px;
+            }
+            .flex-container a
+            {
+                color:blue;
+            }
+            #stickybar
+            {
+                text-align: center;
+                background-color: #00bfff;
+                color: #fff;
+                padding: 20px;
+            }
+            #content
+            {
+                background-color: #fff;
+                color: #333;
+                padding: 20px;
+                margin: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="stickybar"><h1>Hospital Finder</h1></div>
+
+        <div class="flex-container">
+            <div><a href="index.html">
+                Home
+            </a></div>
+            <div><a href="aboutPage.html">
+                About Us
+            </a></div>
+            <div><a href="find-hospital.php">
+                Find a Hospital
+            </a></div>
+            <div><a href="booking.php">
+                Book a Consultation</a></div>
+            <div><a href="contact.html">
+                Contact Us
+            </a></div>
+        </div>
+
+        <div id="content">
+            <h1>Emergency Services</h1>
+
+            <button onclick="getLocation()">See ambulances near you</button>
+            <p id="demo"></p>
+
+            <script>
+                const x = document.getElementById("demo");
+                
+                function getLocation() {
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+                }
+                
+                function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude + 
+                  "<br>Longitude: " + position.coords.longitude;
+                }
+            </script>
+        </div>
+    </body>
+    </html>
